@@ -1,10 +1,8 @@
 body {
+  background-color: $first--color;
   font-family: sans-serif;
   font-size: $size-text;
   line-height: 1.5;
-  color: $c-text;
+  color: $wiht--color;
 }
 
-.title {
-  color: $c-alt;
-}
