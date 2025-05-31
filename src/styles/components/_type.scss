@@ -1,8 +1,121 @@
 body {
   background-color: $first--color;
-  font-family: sans-serif;
-  font-size: $size-text;
+  font-family: $font--text;
+  font-size: $size-textTel;
   line-height: 1.5;
   color: $wiht--color;
+  margin: 0px;
 }
 
+h1{
+  font-family: $font--titre;
+  font-size: 31px;
+  margin-bottom: 28px;
+  margin-top: 0px;
+}
+
+p{
+ margin: 0px;
+ margin-bottom: 20px;
+}
+.parag--nom{
+  font-family: $font--titre;
+  font-size: $size-textTel;
+  margin: 0px;
+  //margin-bottom: 231px;
+}
+
+.ritme--vertical{
+  height:  15.2em;
+}
+
+h2{
+  font-family: $font--titre;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 22px;
+}
+
+
+img{
+  width: 90vw;
+  margin: -20px;
+
+}
+.transforme{
+  transform: scaleX(-1);
+} 
+
+.image--flou{
+  position: absolute;
+  width: 300px;
+  height: 100vw;
+  background-image: url('../assets/images/flou_beau.webp');
+  background-size: cover;       
+  transform: scaleX(-1);
+  z-index: -1;
+  margin: 3.5em -20px;
+}
+.image--yeux {
+  width: 90vw;
+  display: block;
+  margin: 0;        
+  padding: 0;       
+  float: right;      
+}
+
+.fond{
+  background: linear-gradient(to bottom right, $degraderclaire--color, $degraderfoncer--color);
+  padding: 1em;
+  border-radius: 15px;
+  box-shadow: 3px 10px 5px #111230;
+}
+
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 38%; 
+  gap: 10px;
+  margin: 0px 20px;
+  margin-bottom: 44px;
+}
+.grid > *{
+  grid-column: 1 / -1;
+}
+.grid--second{
+  grid-column-end: -2;
+}
+
+.grid--trier{
+  grid-column: 2 / -1;
+}
+
+
+
+.box--who{
+  
+  background-color: transparentize($first--color, 0.5);//$first--color;
+  padding: 1em;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.vidéo--projet{
+  width: 100%;
+  overflow-x: hidden;
+  vertical-align: middle;
+  cursor: none;
+  border-radius: 15px;
+  
+  &.video--dataplay{
+  box-shadow: 3px 10px 5px #111230;
+  }
+  &.video--rux{
+  box-shadow: -3px -10px 5px #111230;
+  }
+}
+
+.cordonée{
+  margin-left: 20px;
+  margin-right: 20px;
+}
