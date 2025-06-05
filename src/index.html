@@ -19,9 +19,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
   <link rel="stylesheet" href="styles/app.css">
 
   <script src="scripts/app.js" defer></script>
+
 </head>
 <!-- <header>
   <p>L’objectif est haut, et les ailes tiendront.</p>
@@ -60,38 +64,42 @@
  <h1>Webdesigner</h1>
  <p class="parag--nom grid--second">Elodie Somerlinck</p>
  <div class="ritme--vertical"></div>
-
+<div class="sun-container">
+  <img id="sun"  src="assets/images/soleil.svg" alt="Soleil" class="sun-svg" />
+</div>
  
  <!--<img class="transforme image--flou" src="assets/images/flou_beau.webp" alt=""> -->
  <div class="image--flou"></div>
  <p class="parag--note grid--trier">Ça, c’est moi sans mes lunettes, je vois rien!</p>
- <p class="parag--who fond">Un univers un peu fou, pour une webdesigneuse un peu folle. On se passionne pour tout : projets web, logos, visuels… Tout ce que vous voulez, rêvez !</p>
- <p class="parag--what fond">Des choses à dire, à crier au monde entier. Passer par le webdesign pour les réaliser.</p>
+ <p class="parag--who fond grid--undeux">Un univers un peu fou, pour une webdesigneuse un peu folle. On se passionne pour tout : projets web, logos, visuels… Tout ce que vous voulez, rêvez !</p>
+ <p class="parag--what fond grid--fin">Des choses à dire, à crier au monde entier. Passer par le webdesign pour les réaliser.</p>
 
 </section>
 
 <section class="section--who grid">
   <h1>Pasionent</h1>
 
-  <div class="box--who grid--drôle">
+  <div class="box--who grid--first">
     <h2>Drôle</h2>
     <p>Ça, c'est moi qui le dis. Toujours joyeuse et jamais pessimiste, je sais être sérieuse quand il faut.</p>
   </div>
-  <div class="box--who grid--déjantée">
+  <div class="box--who grid--first">
     <h2>Un peu déjantée</h2>
     <p>Toujours des projets fous. J'ai plein de projets et cela me forge une sacrée expérience.</p>
   </div>
 
-  <div class="box--who grid--sociable">
+  <div class="box--who grid--first">
     <h2>Sociable</h2>
     <p>On saisit vite le personnage. découvrir de nouvelles personnes, de nouveaux points de vue, la glace est vite brisée.</p>
   </div>
 
   <h2>Des Passions</h2>
-  <p class="parag--commun fond">J'ai des passions communes, comme tout le monde : le dessin, la musique — avec dix ans de violon dans les pattes. Pas trop de sport, mais beaucoup d'énergie !</p>
-  <p class="parag--bizar fond">Puis il y a mes passions bizarres, j’adore faire des collections : marqueurs, CD, timbres. J’ai la collectivité aiguë! J’aime me casser la tête sur des Rubik’s cubes complexes… et j’ai un vrai coup de cœur pour le style dreamcore.</p>
+  <p class="parag--commun fond grid--first">J'ai des passions communes, comme tout le monde : le dessin, la musique — avec dix ans de violon dans les pattes. Pas trop de sport, mais beaucoup d'énergie !</p>
+  <p class="parag--bizar fond grid--undeux">Puis il y a mes passions bizarres, j’adore faire des collections : marqueurs, CD, timbres. J’ai la collectivité aiguë! J’aime me casser la tête sur des Rubik’s cubes complexes… et j’ai un vrai coup de cœur pour le style dreamcore.</p>
 
-
+  <div id="hand">
+ <img class="transforme image--main" src="assets/images/main_soleil.webp" alt="">
+ </div>
 </section>
 
 <section class="section--projet grid">
@@ -99,8 +107,13 @@
     <div>
     <h2>rux</h2>
     <a href="rux.html">
-      <video class="vidéo--projet video--rux" autoplay="" muted="" loop="" playsinline="">
+      <video class="vidéo--projet video--rux video--mobile" autoplay="" muted="" loop="" playsinline="">
         <source src="assets/images/video_rux_tel.mp4" type="video/mp4" alt="Vidéo du projet Dataplay, un site web consacré au Titanic">
+        Votre navigateur ne supporte pas la lecture des vidéos.
+      </video>
+
+      <video class="vidéo--projet video--rux video--desktop" autoplay="" muted="" loop="" playsinline="">
+        <source src="assets/images/video_rux.mp4" type="video/mp4" alt="Vidéo du projet Dataplay, un site web consacré au Titanic">
         Votre navigateur ne supporte pas la lecture des vidéos.
       </video>
     </a>
@@ -109,14 +122,19 @@
   <div>
     <h2>dataplay</h2>
     <a href="dataply.html">
-      <video class="vidéo--projet video--dataplay" autoplay="" muted="" loop="" playsinline="">
+      <video class="vidéo--projet video--dataplay video--mobile" autoplay="" muted="" loop="" playsinline="">
         <source src="assets/images/video_dataplay_tel.mp4" type="video/mp4" alt="Vidéo du projet Dataplay, un site web consacré au Titanic">
+        Votre navigateur ne supporte pas la lecture des vidéos.
+      </video>
+
+      <video class="vidéo--projet video--dataplay video--desktop" autoplay="" muted="" loop="" playsinline="">
+        <source src="assets/images/video_dataplay.mp4" type="video/mp4" alt="Vidéo du projet Dataplay, un site web consacré au Titanic">
         Votre navigateur ne supporte pas la lecture des vidéos.
       </video>
     </a>
   </div>
 
-  <img class="transforme image--main" src="assets/images/main_soleil.webp" alt="">
+ 
 </section>
 
 <footer class="footer">
