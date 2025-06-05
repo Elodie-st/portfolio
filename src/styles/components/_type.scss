@@ -36,9 +36,12 @@ h2{
   margin-bottom: 22px;
 }
 
-
 img{
   width: 90vw;
+}
+
+.image--main{
+  
   margin: -20px;
 
 }
@@ -71,6 +74,10 @@ img{
   box-shadow: 3px 10px 5px #111230;
 }
 
+.parag--bleu{
+  background: $bleuclair--color;
+  color: #111230;
+}
 
 .grid{
   display: grid;
@@ -118,4 +125,18 @@ img{
 .cordonée{
   margin-left: 20px;
   margin-right: 20px;
+}
+
+@media (min-width: 734px){
+
+}
+
+@media (min-width: 1200px){
+  .grid{
+    display: grid;
+    grid-template-columns: 27em 9em 1fr; 
+    gap: 22px;
+    margin: 0px 67px;
+    margin-bottom: 48px;
+  }
 }
