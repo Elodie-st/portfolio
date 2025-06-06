@@ -24,6 +24,9 @@ p{
   margin: 0px;
   //margin-bottom: 231px;
 }
+.parag--note{
+  font-size: 18px;
+}
 
 .ritme--vertical{
   height:  15.2em;
@@ -150,6 +153,9 @@ img{
   } 
 }
 
+
+
+
 @media (min-width: 734px){
   .video--mobile {
     display: block;
@@ -175,6 +181,9 @@ img{
    .parag--nom{
     font-size: $size-textOrdi;
   }
+  .parag--note{
+    font-size: 25px;
+  }
   .ritme--vertical{
     height:  7.5em;
   }
@@ -187,9 +196,11 @@ img{
   }
   
   .image--main{
-    
-    margin: -67px;
-  
+    //margin-right: -100px;
+    margin: 0px;
+    width: 60em;
+    z-index: -1;
+
   }
   .image--flou{
     position: absolute;
@@ -198,11 +209,21 @@ img{
     margin: 3.5em -67px;
   }
   .image--yeux {
-    width: 60vw;     
+    width: 60vw;
+    margin-right: -67px;     
   }
   .box--who{
     margin-bottom: 27px;
   }  
+
+  .cordonée{
+    margin-left: 67px;
+    margin-right: 67px;
+    margin-top: 105px;
+   
+  }
+
+ 
 
   //gird
   .grid{
@@ -227,6 +248,8 @@ img{
   .grid--firstdeux{
     grid-column: 1 / -2;
   }
+  
+ 
   //image
   .image--fresque{
     width: 90vw;
@@ -236,17 +259,20 @@ img{
   }
  
   //soleil
-  #sun{
+  #sun, #moon{
     position: fixed;
     top: -10vh;
     right: -10vw;
     z-index: -2;
     //transform: translateX(-50%);
     pointer-events: none; // pour que le curseur passe à travers
+    transition: top 0.5s ease-out, right 0.5s ease-out;
   }
   
   .sun-svg {
     width: 50em;
   }
-
+ .moon-svg{
+  width: 40em;
+ }
 }
