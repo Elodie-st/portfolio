@@ -152,11 +152,59 @@ img{
     width: 205px;
   } 
 }
+.cordonee--lien{
+  text-decoration: none;
+  color: $wiht--color;
+  display: flex;
+  margin-bottom: 20px;
+ }
 
-
-
+//tablette
 
 @media (min-width: 734px){
+  body {
+    font-size: 18px;
+  }
+  
+  h1{
+    font-size: 69px;
+  }
+  .parag--note{
+    font-size: 22px;
+  }
+  
+  
+  h2{
+    font-family: $font--titre;
+    font-size: 35px;
+    margin-top: 0px;
+    margin-bottom: 22px;
+  }
+
+  .image--flou{
+    position: absolute;
+    width: 31em;
+    height: 41em;    
+    margin: 3.5em -28px;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 38%; 
+    gap: 10px;
+    margin: 0px 28px;
+    margin-bottom: 44px;
+  }
+  .grid > *{
+    grid-column: 1 / -1;
+  }
+  .grid--second{
+    grid-column-end: -2;
+  }
+  
+  .grid--trier{
+    grid-column: 2 / -1;
+  }
+
   .video--mobile {
     display: block;
   }
@@ -166,6 +214,14 @@ img{
   }
 }
 
+//ordi
+ @media (max-width: 1200px) {
+  #sun,
+  #moon,
+  #moon--data {
+    display: none;
+  }
+}
 @media (min-width: 1200px){
   body {
     font-size: $size-textOrdi;
@@ -195,10 +251,21 @@ img{
     width: 100vw;
   }
   
+  a {
+
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+  
+  a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px $bleuclair--color);
+  }
+
   .image--main{
     //margin-right: -100px;
     margin: 0px;
-    width: 60em;
+    width: 50em;
     z-index: -1;
 
   }
@@ -209,7 +276,7 @@ img{
     margin: 3.5em -67px;
   }
   .image--yeux {
-    width: 60vw;
+    width: 70vw;
     margin-right: -67px;     
   }
   .box--who{
@@ -220,10 +287,20 @@ img{
     margin-left: 67px;
     margin-right: 67px;
     margin-top: 105px;
-   
+    .cordonee--lien{
+     margin-bottom: 27px;
+    }
+    
   }
-
- 
+  
+ .ajust--footer{
+  display: flex;
+  flex-direction: row;
+  
+ }
+ .copyright{
+  margin-top: 183px;
+ }
 
   //gird
   .grid{
@@ -259,7 +336,7 @@ img{
   }
  
   //soleil
-  #sun, #moon{
+  #sun, #moon, #moon--data{
     position: fixed;
     top: -10vh;
     right: -10vw;
