@@ -5,11 +5,12 @@ body {
   line-height: 1.5;
   color: $wiht--color;
   margin: 0px;
+  overflow-x: hidden;
 }
 
 h1{
   font-family: $font--titre;
-  font-size: 31px;
+  font-size: 10px;
   margin-bottom: 28px;
   margin-top: 0px;
 }
@@ -40,13 +41,13 @@ h2{
 }
 
 img{
-  width: 90vw;
+  width: 100%;
 }
 
 .image--main{
-  
-  margin: -20px;
-  z-index: -2;
+  width: 100%; // elle dépasse volontairement
+  position: relative;
+  transform: translateX(5vw);
 
 }
 .transforme{
@@ -55,7 +56,7 @@ img{
 
 .image--flou{
   position: absolute;
-  width: 300px;
+   width: 200px;
   height: 100vw;
   background-image: url('../assets/images/flou_beau.webp');
   background-size: cover;       
@@ -64,11 +65,9 @@ img{
   margin: 3.5em -20px;
 }
 .image--yeux {
-  width: 90vw;
-  display: block;
-  margin: 0;        
-  padding: 0;       
-  float: right;      
+  width: 100%; // elle dépasse volontairement
+  position: relative;
+//  transform: translateX(5vw) translateY(11vw);
 }
 
 .fond{
@@ -87,11 +86,12 @@ img{
 
 .grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 38%; 
+  grid-template-columns: 1fr; 
   gap: 10px;
   margin: 0px 20px;
   margin-bottom: 44px;
 }
+/*
 .grid > *{
   grid-column: 1 / -1;
 }
@@ -102,7 +102,7 @@ img{
 .grid--trier{
   grid-column: 2 / -1;
 }
-
+*/
 
 
 .box--who{
@@ -131,6 +131,7 @@ img{
 .cordonée{
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 10px;
 }
 //video
 .video--mobile {
@@ -231,6 +232,9 @@ img{
     font-size: 117px;
     margin-bottom: 43px;
   }
+  .titre--page{
+    margin-top: 85px;
+  }
   p{
     margin-bottom: 27px;
    }
@@ -261,6 +265,53 @@ img{
     opacity: 0.7;
     filter: drop-shadow(0 0 5px $bleuclair--color);
   }
+
+  .vidéo--projet{ 
+    &.video--dataplay{
+    box-shadow: 3px 10px 5px #111230;
+    }
+    &.video--rux{
+    box-shadow: 3px 10px 5px #111230;
+    }
+  }
+  .vidéo--projet:hover {
+    &.video--dataplay{
+      box-shadow: none;
+
+      }
+      &.video--rux{
+      box-shadow: none;
+
+      }
+  }
+
+.text--cliquer {
+  position: relative;
+  display: inline-block; // ou grid/flex selon ton layout
+
+  &::after {
+    content: "Cliquez ici pour voir plus";
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $first--color;
+    font-size: 22px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  .text--cliquer {
+    display: block;
+    width: 100%;
+  }
+}
 
   .image--main{
     //margin-right: -100px;
@@ -303,6 +354,7 @@ img{
  }
 
   //gird
+
   .grid{
     display: grid;
     grid-template-columns: 27em 9em 1fr; 
@@ -325,8 +377,35 @@ img{
   .grid--firstdeux{
     grid-column: 1 / -2;
   }
+
   
- 
+  .section--projet {
+    display: grid; 
+    grid-template-columns: 27em 9em 1fr;
+    grid-template-areas:
+      " h1 h1 h1"
+      " h2r h2d h2d "
+      " imgr imgd imgd";
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+  .gird--titreReve{
+    grid-area: h1;
+  }
+  .grid--titreRux {
+    grid-area: h2r;
+  }
+   .grid--titreData {
+    grid-area: h2d;
+  }
+  .grid--rux{
+    grid-area: imgr;
+  }
+  .grid--data{
+    grid-area: imgd;
+  }
+
+
   //image
   .image--fresque{
     width: 90vw;
