@@ -10,7 +10,7 @@ body {
 
 h1{
   font-family: $font--titre;
-  font-size: 10px;
+  font-size: 28px;
   margin-bottom: 28px;
   margin-top: 0px;
 }
@@ -47,7 +47,7 @@ img{
 .image--main{
   width: 100%; // elle dépasse volontairement
   position: relative;
-  transform: translateX(5vw);
+  transform: translateX(4vw);
 
 }
 .transforme{
@@ -318,7 +318,8 @@ img{
     margin: 0px;
     width: 50em;
     z-index: -1;
-
+    transform: translateX(4vw);
+    
   }
   .image--flou{
     position: absolute;
@@ -327,8 +328,9 @@ img{
     margin: 3.5em -67px;
   }
   .image--yeux {
-    width: 70vw;
-    margin-right: -67px;     
+    width: 65vw;
+    margin-right: -10px;
+    margin-bottom: -10vh;     
   }
   .box--who{
     margin-bottom: 27px;
@@ -338,6 +340,7 @@ img{
     margin-left: 67px;
     margin-right: 67px;
     margin-top: 105px;
+    font-size: 22px;
     .cordonee--lien{
      margin-bottom: 27px;
     }
