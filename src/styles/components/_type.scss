@@ -160,6 +160,21 @@ img{
   margin-bottom: 20px;
  }
 
+
+ @keyframes anim {
+  from {
+    filter: saturate(0) contrast(4) brightness(.1) blur(3px);
+    opacity: 0;
+    scale: .95;
+    translate: 0 1rem;
+  }
+}
+p,h1,h2 {
+  animation: anim ease-in both;
+  animation-timeline: view(); 
+  animation-range: 0vh 20vh; 
+}
+
 //tablette
 
 @media (min-width: 734px){
@@ -216,14 +231,14 @@ img{
 }
 
 //ordi
- @media (max-width: 1200px) {
+ @media (max-width: 1000px) {
   #sun,
   #moon,
   #moon--data {
     display: none;
   }
 }
-@media (min-width: 1200px){
+@media (min-width: 1000px){
   body {
     font-size: $size-textOrdi;
   }
@@ -277,17 +292,17 @@ img{
   .vidéo--projet:hover {
     &.video--dataplay{
       box-shadow: none;
-
+      cursor: pointer;
       }
       &.video--rux{
       box-shadow: none;
-
+      cursor: pointer;
       }
   }
 
 .text--cliquer {
-  position: relative;
-  display: inline-block; // ou grid/flex selon ton layout
+  //position: relative;
+  display: inline-block; 
 
   &::after {
     content: "Cliquez ici pour voir plus";
@@ -313,14 +328,6 @@ img{
   }
 }
 
-  .image--main{
-    //margin-right: -100px;
-    margin: 0px;
-    width: 50em;
-    z-index: -1;
-    transform: translateX(4vw);
-    
-  }
   .image--flou{
     position: absolute;
     width: 31em;
@@ -328,9 +335,14 @@ img{
     margin: 3.5em -67px;
   }
   .image--yeux {
-    width: 65vw;
-    margin-right: -10px;
-    margin-bottom: -10vh;     
+    position: absolute;
+    right:0px;
+  
+    max-height: 550px;
+    width: auto;
+    //height: 200px;
+    //margin-right: -10%;
+   // margin-bottom: -50%;     
   }
   .box--who{
     margin-bottom: 27px;
@@ -364,6 +376,7 @@ img{
     gap: 22px;
     margin: 0px 67px;
     margin-bottom: 67px;
+    align-items: start;
   }
   .grid--trier{
     grid-column: 2 / -2;
@@ -411,10 +424,10 @@ img{
 
   //image
   .image--fresque{
-    width: 90vw;
+    width: 100%;
   }
   .image--travaux {
-    width: 50vw;
+    width: 100%;
   }
  
   //soleil
@@ -433,5 +446,63 @@ img{
   }
  .moon-svg{
   width: 40em;
+ }
+
+ .Conception{
+  grid-template-areas:
+  "t1 . ."
+  "p1 . ."
+  "p2 . ."
+  "p3 p3 ."
+  "p4 img1 img1"
+  "p5 img1 img1"
+  "p6 img1 img1"
+  ;
+ }
+ .conspt{
+  grid-area: t1;
+ }
+ .parag1{
+  grid-area: p1;
+ }
+ .parag2{
+  grid-area: p2;
+ }
+ .parag3{
+  grid-area: p3;
+ }
+ .parag4{
+  grid-area: p4;
+ }
+ .parag5{
+  grid-area: p5;
+ }
+ .parag6{
+  grid-area: p6;
+ }
+ .image1{
+  grid-area: img1;
+  width: 100%;
+  object-fit: cover;
+ }
+ .creatif, .présentation{
+  grid-template-areas:
+  "T1 img img"
+  "P1 img img"
+  "P2 img img";
+ }
+ .crea{
+  grid-area: T1;
+ }
+ .parag--bleu--1{
+  grid-area: P1;
+ }
+ .parag--bleu--2{
+  grid-area: P2;
+ }
+ .image--fresque--1 {
+  grid-area: img;
+  width: 100%;
+  object-fit: cover;
  }
 }

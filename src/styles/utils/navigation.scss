@@ -71,24 +71,25 @@
     }
   }
 }
-@media (min-width: 1200px){
+@media (min-width: 1000px){
 
   .fab-container {
+    overflow: hidden;
     flex-direction: row-reverse;
     justify-content: left;
-    align-items: start;
+  //  align-items: start;
     position: fixed;
     top: 0;
     left: 0;
     bottom: auto;
-    right: auto;
-    width: 100%;
+    right: 100px;
+    width: 100vw;
     padding: 10px 67px;
     
     background: $second--color;
     box-shadow: 3px 10px 5px #111230;
     height: auto;
-
+    z-index: 10;
     &:hover {
       height: auto;
 
@@ -117,6 +118,7 @@
         transition: none;
         opacity: 1;
         position: static;
+        visibility: visible;
       }
     .fab {
       display: none; // cache le gros bouton rond
