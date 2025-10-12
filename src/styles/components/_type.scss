@@ -10,7 +10,7 @@ body {
 
 h1{
   font-family: $font--titre;
-  font-size: 28px;
+  font-size: 31px;
   margin-bottom: 28px;
   margin-top: 0px;
 }
@@ -56,8 +56,8 @@ img{
 
 .image--flou{
   position: absolute;
-   width: 200px;
-  height: 100vw;
+  width: 20em;
+    height: 31em; 
   background-image: url('../assets/images/flou_beau.webp');
   background-size: cover;       
   transform: scaleX(-1);
@@ -67,6 +67,7 @@ img{
 .image--yeux {
   width: 100%; // elle dépasse volontairement
   position: relative;
+  margin: 0em 0px -44px 1em;
 //  transform: translateX(5vw) translateY(11vw);
 }
 
@@ -91,20 +92,13 @@ img{
   margin: 0px 20px;
   margin-bottom: 44px;
 }
-/*
+
 .grid > *{
   grid-column: 1 / -1;
 }
-.grid--second{
-  grid-column-end: -2;
+.grid--trier, .grid--undeux, .grid--fin, .grid--first,.grid--firstdeux{
+  grid-column: 1 / -1;
 }
-
-.grid--trier{
-  grid-column: 2 / -1;
-}
-*/
-
-
 .box--who{
   
   background-color: transparentize($first--color, 0.5);//$first--color;
